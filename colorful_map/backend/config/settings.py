@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-3iagq-3&kla5hybnfni)l6z9jmfr!scf0w$p81f(($#s4ck9k7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['colorfulmap.onrender.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -131,5 +131,9 @@ CHANNEL_LAYERS = {
 }
 
 # CORS
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOWED_ORIGINS = [
+    'https://inbox-kit.vercel.app',
+    'http://localhost:5173',
+    'http://localhost:3000',
+]
 

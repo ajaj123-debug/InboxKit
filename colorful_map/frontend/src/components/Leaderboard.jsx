@@ -8,7 +8,7 @@ export default function Leaderboard({ refreshTrigger }) {
     useEffect(() => {
         const fetchLeaderboard = async () => {
             try {
-                const res = await axios.get('http://localhost:8000/api/leaderboard/');
+                const res = await axios.get('https://colorfulmap.onrender.com/api/leaderboard/');
                 setLeaders(res.data);
             } catch (e) {
                 console.error(e);

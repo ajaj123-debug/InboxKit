@@ -1,8 +1,8 @@
 import { useEffect, useState, useRef, useCallback } from 'react';
 import axios from 'axios';
 
-const WS_URL = 'ws://localhost:8000/ws/game/';
-const API_URL = 'http://localhost:8000/api/blocks/';
+const WS_URL = 'wss://colorfulmap.onrender.com/ws/game/';
+const API_URL = 'https://colorfulmap.onrender.com/api/blocks/';
 
 export function useGame() {
   const [blocks, setBlocks] = useState({});
