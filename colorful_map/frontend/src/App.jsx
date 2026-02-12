@@ -82,11 +82,50 @@ function App() {
             style={{
               position: 'fixed', top: 0, left: 0, right: 0,
               background: '#e74c3c', color: 'white',
-              padding: '10px', textAlign: 'center',
+              padding: '15px', textAlign: 'center',
               zIndex: 9999, fontWeight: 'bold'
             }}
           >
-            Connecting to Server...
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={{
+                visible: {
+                  transition: {
+                    staggerChildren: 0.3,
+                  },
+                },
+              }}
+              style={{ lineHeight: '1.8' }}
+            >
+              <motion.div
+                variants={{
+                  hidden: { opacity: 0, x: -20 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+                transition={{ duration: 0.6 }}
+              >
+                ⚠️ Backend is sleeping...
+              </motion.div>
+              <motion.div
+                variants={{
+                  hidden: { opacity: 0, x: -20 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+                transition={{ duration: 0.6 }}
+              >
+                Please wait while it wakes up
+              </motion.div>
+              <motion.div
+                variants={{
+                  hidden: { opacity: 0, x: -20 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+                transition={{ duration: 0.6 }}
+              >
+                This may take a few seconds...
+              </motion.div>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
